@@ -51,6 +51,10 @@ Chat para Desafio da UX com essas funcionalidades -
 
 <img width="495" alt="Screenshot Edição de grupo" src="./Screenshots/Edit-grupo.png">
 
+## Mobile
+
+<img width="495" alt="Screenshot Edição de grupo" src="./Screenshots/Mobile.png">
+
 ---
 
 Como rodar:
