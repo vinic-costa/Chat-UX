@@ -133,14 +133,14 @@ const Signup = () => {
   return (
     <VStack spacing="5px">
       <FormControl id="first-name" isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel>Nome</FormLabel>
         <Input
           placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
         />
       </FormControl>
       <FormControl id="email" isRequired>
-        <FormLabel>Email Address</FormLabel>
+        <FormLabel>Endereço de email</FormLabel>
         <Input
           type="email"
           placeholder="Enter Your Email Address"
@@ -148,7 +148,7 @@ const Signup = () => {
         />
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel>Senha</FormLabel>
         <InputGroup size="md">
           <Input
             type={show ? "text" : "password"}
@@ -163,7 +163,7 @@ const Signup = () => {
         </InputGroup>
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Confirm Password</FormLabel>
+        <FormLabel>Confirmar Senha</FormLabel>
         <InputGroup size="md">
           <Input
             type={show ? "text" : "password"}
@@ -178,7 +178,7 @@ const Signup = () => {
         </InputGroup>
       </FormControl>
       <FormControl id="pic">
-        <FormLabel>Upload your Picture</FormLabel>
+        <FormLabel>Faça upload da sua foto</FormLabel>
         <Input
           type="file"
           p={1.5}
@@ -193,7 +193,7 @@ const Signup = () => {
         onClick={submitHandler}
         isLoading={picLoading}
       >
-        Sign Up
+        Registro
       </Button>
     </VStack>
   );
