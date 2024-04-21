@@ -29,7 +29,7 @@ Chat para Desafio da UX com essas funcionalidades -
 
 ## Página de Registro
 
-<img width="743" alt="Screenshot Registro" src="./Screenshots/Registro.png">
+<img width="876" alt="Screenshot Registro" src="./Screenshots/Registro.png">
 
 ## Página do Chat
 
@@ -37,11 +37,11 @@ Chat para Desafio da UX com essas funcionalidades -
 
 ## Página de Perfil
 
-<img width="762" alt="Screenshot Perfil" src="./Screenshots/perfil.png">
+<img width="1039" alt="Screenshot Perfil" src="./Screenshots/perfil.png">
 
 ## Pesquisa de Usuários
 
-<img width="529" alt="Screenshot Pesquisa pro usuários" src="./Screenshots/pesquisa.png">
+<img width="603" alt="Screenshot Pesquisa pro usuários" src="./Screenshots/pesquisa.png">
 
 ## Criação de Grupo
 
@@ -49,11 +49,11 @@ Chat para Desafio da UX com essas funcionalidades -
 
 ## Edição de Grupo
 
-<img width="495" alt="Screenshot Edição de grupo" src="./Screenshots/Edit-grupo.png">
+<img width="603" alt="Screenshot Edição de grupo" src="./Screenshots/Edit-grupo.png">
 
 ## Mobile
 
-<img width="495" alt="Screenshot Edição de grupo" src="./Screenshots/Mobile.png">
+<img width="360" alt="Screenshot Edição de grupo" src="./Screenshots/Mobile.png">
 
 ---
 
