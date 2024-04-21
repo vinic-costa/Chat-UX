@@ -53,7 +53,7 @@ Chat para Desafio da UX com essas funcionalidades -
 
 ## Mobile
 
-<img width="360" height="900" alt="Screenshot Edição de grupo" src="./Screenshots/Mobile.png">
+<img width="360" height="700" alt="Screenshot Edição de grupo" src="./Screenshots/Mobile.png">
 
 ---
 
