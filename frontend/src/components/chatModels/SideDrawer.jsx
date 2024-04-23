@@ -71,7 +71,7 @@ function SideDrawer() {
         try {
             setLoading(true);
 
-            // sending bearer token with the request
+            // enviando token ao portador com a solicitação
             const config = {
                 headers: {
                     Authorization: `Bearer ${user.token}`,

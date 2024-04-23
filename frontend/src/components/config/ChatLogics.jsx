@@ -1,22 +1,22 @@
-// The isSameSenderMargin function takes four arguments: messages (an array of message objects), m (the current message object),
-//  i (the index of the current message in the array), and userId (the ID of the current user)
+// A função isSameSenderMargin recebe quatro argumentos: messages (uma matriz de objetos de mensagem), m (o objeto de mensagem atual),
+//  i (o índice da mensagem atual na matriz) e userId (o ID do usuário atual)
 
 export const isSameSenderMargin = (messages, m, i, userId) => {
 
     if (
-        // message exists
+        // mensagem existe
         i < messages.length - 1 &&
-        // if sent by same user
+        // se a mensagem foi enviada pelo mesmo usuário
         messages[i + 1].sender._id === m.sender._id &&
-        // not sent by current user
+        // não enviada pelo usuário atual
         messages[i].sender._id !== userId
     )
         return 33;
     else if (
         (i < messages.length - 1 &&
-            // sent by different user
+            // mensagem enviada por usuário diferente
             messages[i + 1].sender._id !== m.sender._id &&
-            // sent by current user
+            // enviada pelo usuário atual
             messages[i].sender._id !== userId) ||
         (i === messages.length - 1 && messages[i].sender._id !== userId)
     )
@@ -24,8 +24,8 @@ export const isSameSenderMargin = (messages, m, i, userId) => {
     else return "auto";
 };
 
-// The isSameSender function also takes the same four arguments and is used to determine
-//  if the current message and the next message were sent by the same user. 
+//  A função isSameSender também usa os mesmos quatro argumentos e é usada para determinar
+//  se a mensagem atual e a próxima mensagem foram enviadas pelo mesmo usuário. 
 export const isSameSender = (messages, m, i, userId) => {
     return (
         i < messages.length - 1 &&
@@ -37,7 +37,7 @@ export const isSameSender = (messages, m, i, userId) => {
 
 export const isLastMessage = (messages, i, userId) => {
     return (
-        // message not from same sender
+        // mensagem não é do mesmo remetente
         i === messages.length - 1 &&
         messages[messages.length - 1].sender._id !== userId &&
         messages[messages.length - 1].sender._id

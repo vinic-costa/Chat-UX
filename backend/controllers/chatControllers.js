@@ -3,7 +3,7 @@ const Chat = require("../models/chat");
 const User = require("../models/user");
 
 const accessChat = asyncHandler(async (req, res) => {
-    // another user's id
+    // outro Id de usuário
     const { userId } = req.body;
 
     if (!userId) {
@@ -11,10 +11,10 @@ const accessChat = asyncHandler(async (req, res) => {
         return res.sendStatus(400);
     }
 
-    // check if chat already exists
+    // checar se o chat já existe
     var isChat = await Chat.find({
         isGroupChat: false,
-        // both users are in the chat
+        // ambos usuáros estejam no chat
         $and: [
             { users: { $elemMatch: { $eq: req.user._id } } },
             { users: { $elemMatch: { $eq: userId } } },
@@ -28,12 +28,12 @@ const accessChat = asyncHandler(async (req, res) => {
         select: "name pic email",
     });
 
-    // no chat before
+    // sem conversas anteriores
     if (isChat.length > 0) {
         res.send(isChat[0]);
     } else {
 
-        // create a new chat
+        // Criando um novo chat
         var chatData = {
             chatName: "sender",
             isGroupChat: false,
@@ -54,10 +54,10 @@ const accessChat = asyncHandler(async (req, res) => {
     }
 });
 
-//  /api/chat - fetch chat for particular user
+//  /api/chat - fetch chat para um usuário particular
 const fetchChats = asyncHandler(async (req, res) => {
     try {
-        // check for chats where the user is present with this id
+        // verifica se há chats onde o usuário está presente com este id
         Chat.find({ users: { $elemMatch: { $eq: req.user._id } } })
             .populate("users", "-password")
             .populate("groupAdmin", "-password")
@@ -82,7 +82,7 @@ const createGroupChat = asyncHandler(async (req, res) => {
         return res.status(400).send({ message: "Please Fill all the feilds" });
     }
 
-    // users that you want to add in group
+    // usuários que você quer adicionar no grupo
     var users = JSON.parse(req.body.users);
 
     if (users.length < 2) {
@@ -91,7 +91,7 @@ const createGroupChat = asyncHandler(async (req, res) => {
             .send("More than 2 users are required to form a group chat");
     }
 
-    // add the admin to the group
+    // adiciona o administrador ao grupo
     users.push(req.user);
 
     try {
@@ -102,7 +102,7 @@ const createGroupChat = asyncHandler(async (req, res) => {
             groupAdmin: req.user,
         });
 
-        // create user with user as admin
+        // usuário como administrador
         const fullGroupChat = await Chat.findOne({ _id: groupChat._id })
             .populate("users", "-password")
             .populate("groupAdmin", "-password");
@@ -142,15 +142,15 @@ const renameGroup = asyncHandler(async (req, res) => {
 const removeFromGroup = asyncHandler(async (req, res) => {
     const { chatId, userId } = req.body;
 
-    // check if the requester is admin
+    // verifica se o solicitante é administrador
     const removed = await Chat.findByIdAndUpdate(
         chatId,
         {
-            // like pop the user
+            // Como 'pop' o usuário
             $pull: { users: userId },
         },
         {   
-            // return the updated chat
+            // retorna o chat atualizado
             new: true,
         }
     )
@@ -169,7 +169,7 @@ const removeFromGroup = asyncHandler(async (req, res) => {
 const addToGroup = asyncHandler(async (req, res) => {
     const { chatId, userId } = req.body;
 
-    // check if the requester is admin
+    // verifica se o solicitante é administrador
     const added = await Chat.findByIdAndUpdate(
         chatId,
         {

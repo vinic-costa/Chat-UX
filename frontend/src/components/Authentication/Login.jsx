@@ -76,7 +76,7 @@ const Login = () => {
         <Input
           value={email}
           type="email"
-          placeholder="Enter Your Email Address"
+          placeholder="Digite seu endereço de email"
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
@@ -87,7 +87,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
-            placeholder="Enter password"
+            placeholder="Digite sua senha"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -105,18 +105,6 @@ const Login = () => {
       >
         Login
       </Button>
-      {/* for testing guests user */}
-      {/* <Button
-        variant="solid"
-        colorScheme="red"
-        width="100%"
-        onClick={() => {
-          setEmail("guest@example.com");
-          setPassword("123456");
-        }}
-      >
-        Get Guest User Credentials
-      </Button> */}
     </VStack>
   );
 };

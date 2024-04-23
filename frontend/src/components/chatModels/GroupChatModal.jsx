@@ -30,7 +30,7 @@ const GroupChatModal = ({ children }) => {
   const toast = useToast();
   const { user, chats, setChats } = ChatState();
 
-  // make a function to add the user to the selected users
+  // criando uma função para adicionar o usuário aos usuários selecionados
   const handleGroup = (userToAdd) => {
     if (selectedUsers.includes(userToAdd)) {
       toast({
@@ -46,7 +46,7 @@ const GroupChatModal = ({ children }) => {
     setSelectedUsers([...selectedUsers, userToAdd]);
   };
 
-  // make a function to search the users
+  // fazendo uma função para pesquisar os usuários
   const handleSearch = async (query) => {
     setSearch(query);
     if (!query) {
@@ -76,12 +76,12 @@ const GroupChatModal = ({ children }) => {
     }
   };
 
-  // make a function to delete the user from the selected users
+  // fazendo uma função para excluir o usuário dos usuários selecionados
   const handleDelete = (delUser) => {
     setSelectedUsers(selectedUsers.filter((sel) => sel._id !== delUser._id));
   };
 
-  // make a function to create the group chat
+  // criando uma função para criar o chat em grupo
   const handleSubmit = async () => {
     if (!groupChatName || !selectedUsers) {
       toast({

@@ -4,7 +4,7 @@ const chatModel = mongoose.Schema(
     {
         chatName: { type: String, trim: true },
         isGroupChat: { type: Boolean, default: false },
-        // to append users to chat
+        // para anexar usuários ao chat
         users: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
         latestMessage: {
             type: mongoose.Schema.Types.ObjectId,

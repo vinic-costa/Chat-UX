@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 const ChatContext = createContext();
-// provide the chat context to the entire app
+// fornece o contexto do bate-papo para todo o aplicativo
 const ChatProvider = ({ children }) => {
     const [selectedChat, setSelectedChat] = useState();
     const [user, setUser] = useState();
@@ -9,12 +9,12 @@ const ChatProvider = ({ children }) => {
     const [chats, setChats] = useState();
     const history = useHistory();
 
-    // get the user info from local storage
+    // obtem as informações do usuário do armazenamento local
     useEffect(() => {
         const userInfo = JSON.parse(localStorage.getItem("userInfo"));
         setUser(userInfo);
 
-        // if user is not logged in, redirect to login page
+        // se o usuário não estiver logado, redirecione para a página de login
         if (!userInfo) history.push("/");
     }, [history]);
 
