@@ -57,7 +57,7 @@ Chat para Desafio da UX com essas funcionalidades -
 
 ## Emoji
 
-<img width="360" height="600" alt="Screenshot Edição de grupo" src="./Screenshots/emoji.png.png"><img width="360" height="600" alt="Screenshot Edição de grupo" src="./Screenshots/emoji-edit.png.png">
+<img width="360" height="600" alt="Screenshot Edição de grupo" src="./Screenshots/emoji.png"><img width="360" height="600" alt="Screenshot Edição de grupo" src="./Screenshots/emoji-edit.png">
 ---
 
 Como rodar:
