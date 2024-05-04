@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.5.1",
     "axios": "^1.6.2",
+    "backend": "file:..",
     "emoji-mart": "^5.5.2",
     "emoji-picker-react": "^4.9.2",
     "framer-motion": "^6.5.1",
