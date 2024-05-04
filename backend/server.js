@@ -19,8 +19,9 @@ app.use('/api/message', messageRoutes);
 
 app.use(cors());
 
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/public/index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
 
 app.use(notFound);
